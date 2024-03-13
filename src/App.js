@@ -19,11 +19,20 @@ function App() {
         <Routes>
           {/* Define your routes using the <Route> component */}
           <Route path="/" element={<Shop />} />
-          <Route path="/men" element={<ShopCategory banner={mens_banner} category="men" />} />
-          <Route path="/women" element={<ShopCategory banner={womens_banner} category="women" />} />
-          <Route path="/kids" element={<ShopCategory banner={kids_banner} category="kid" />} />
-          <Route path="/products" element={<Product />}>
-            <Route path=":productId" element={Product}></Route>
+          <Route
+            path="/men"
+            element={<ShopCategory banner={mens_banner} category="men" />}
+          />
+          <Route
+            path="/women"
+            element={<ShopCategory banner={womens_banner} category="women" />}
+          />
+          <Route
+            path="/kids"
+            element={<ShopCategory banner={kids_banner} category="kid" />}
+          />
+          <Route path="/product" element={<Product />}>
+            <Route path=":productId" element={<Product />} />
           </Route>
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<LoginSignup />} />
